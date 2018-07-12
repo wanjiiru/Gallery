@@ -6,8 +6,8 @@ class Image(models.Model):
     name = models.CharField(max_length = 60)
     pic = models.ImageField(upload_to = 'uploads')
     description = models.TextField()
-    image_location = models.ForeignKey('Location', null = True)
-    image_category = models.ForeignKey('Category', null = True)
+    image_location = models.ForeignKey('Location')
+    image_category = models.ForeignKey('Category')
 
 
 
@@ -42,7 +42,6 @@ class Image(models.Model):
 
 
 class Location(models.Model):
-    name = models.CharField(max_length = 60)
     locations = (
         ('Nairobi','Nairobi'),
         ('Zurich','Zurich'),
@@ -55,9 +54,16 @@ class Location(models.Model):
         ('Berlin','Berlin')
     )
 
+    loc = models.CharField(max_length=255, choices=locations)
+
+    class Meta:
+        verbose_name_plural = 'Location'
 
     def __str__(self):
-        return self.name
+        return f"{self.loc}"
+
+
+
 
     def save_location(self):
         self.save()
@@ -65,7 +71,6 @@ class Location(models.Model):
 
 
 class Category(models.Model):
-    name = models.CharField(max_length = 60)
     categories = (
         ('Food','Food'),
         ('Cars','Cars'),
@@ -73,10 +78,17 @@ class Category(models.Model):
         ('Quotes','Quotes')
     )
 
+    cat = models.CharField(max_length = 255, choices = categories)
+
+
+    class Meta:
+        verbose_name_plural = 'Category'
 
 
     def __str__(self):
-        return self.name
+        return f"{self.cat}"
+
+
 
 
     def save_category(self):
@@ -85,4 +97,3 @@ class Category(models.Model):
 
     def delete_category(self):
         self.delete()
-
