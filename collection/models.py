@@ -12,13 +12,10 @@ class Image(models.Model):
 
 
     @classmethod
-    def save_image(cls):
-        image = cls.objects.all()
-        return image
+    def get_all_images(cls):
+        images = cls.objects.all()
+        return images
 
-
-    def __str__(self):
-        return self.name
 
 
     def delete_image(self):
@@ -26,8 +23,8 @@ class Image(models.Model):
 
 
     @classmethod
-    def get_image_by_id(cls,id):
-        image = cls.objects.filter(id=id).all()
+    def get_image_by_id(cls,image_id):
+        image = cls.objects.filter(image_id= id).all()
         return image
 
     @classmethod
@@ -39,6 +36,9 @@ class Image(models.Model):
     def get_image_by_location(cls,location):
         images = cls.objects.filter(image_location__location_name__icontains=location).all()
         return images
+
+    def __str__(self):
+        return self.name
 
 
 class Location(models.Model):
