@@ -9,14 +9,10 @@ class Image(models.Model):
     image_location = models.ForeignKey('Location')
     image_category = models.ForeignKey('Category')
 
-
-
     @classmethod
     def get_all_images(cls):
         images = cls.objects.all()
         return images
-
-
 
     def delete_image(self):
         self.delete()
@@ -28,13 +24,13 @@ class Image(models.Model):
         return image
 
     @classmethod
-    def get_image_by_cat(cls,category):
-        images = cls.objects.filter(image_category__category_name__icontains=category).all()
+    def get_image_by_cat(cls,cat):
+        images = cls.objects.filter(image_category__cat__contains=cat)
         return images
 
     @classmethod
-    def get_image_by_location(cls,location):
-        images = cls.objects.filter(image_location__location_name__icontains=location).all()
+    def get_image_by_location(cls,loc):
+        images = cls.objects.filter(image_location__loc__contains=loc).all()
         return images
 
     def __str__(self):
@@ -55,6 +51,7 @@ class Location(models.Model):
     )
 
     loc = models.CharField(max_length=255, choices=locations)
+
 
     class Meta:
         verbose_name_plural = 'Location'

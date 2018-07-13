@@ -1,10 +1,10 @@
-{%extends 'base.html'%} 
+{% extends 'base.html'%}
 {% block content %}
 <div class="container">
 
   <div class="row">
-    {% if images %}
-      <h2>Found {{ images|length }} of searched term {{message}}</h2>
+    {% if found_results %}
+      <h2>Found {{ found_results|length }} of search term {{message}}</h2>
     {% else %}
       <h2> Found 0 images for the search term {{message}}</h2>
     {% endif %}
@@ -13,10 +13,11 @@
 
   <div class="row">
 
-  {% if images %}
-    {% for images in images %}
+  {% if found_results %}
+    {% for image in found_results %}
       <div class="col-sm-6 col-md-3">
-          <h1>{{image.location}}</h1>
+          <h1>{{image.image_category}}</h1>
+          <img class="card-img-top" src="{{image.pic.url}}" alt="Card image cap">
       </div>
     {% endfor %}
   {% endif %}
