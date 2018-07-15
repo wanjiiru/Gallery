@@ -7,8 +7,8 @@ from .models import Image, Category, Location
 def welcome(request):
     images = Image.get_all_images()
     categories = Category.objects.all()
-    location = Location.objects.all()
-    return render(request, 'welcome.html', {"images": images, 'categories': categories, 'locations': location})
+    locations = Location.objects.all()
+    return render(request, 'welcome.html', {"images": images, 'categories': categories,'locations':locations})
 
 
 def search_image(request):
@@ -35,4 +35,5 @@ def category(request):
 
 def get_image_by_location(request,loc):
     my_images = Image.get_image_by_location(loc)
-    return render(render, 'category.html', {"my_images": my_images})
+    print(my_images)
+    return render(request, 'location.html', {"my_images": my_images})

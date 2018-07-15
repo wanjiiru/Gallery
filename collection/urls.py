@@ -7,7 +7,7 @@ urlpatterns = [
     url(r'^$', views.welcome, name='welcome'),
     url(r'^search/',views.search_image,name='search_image'),
     url(r'^category/',views.category),
-    url(r'^location/', views.get_image_by_location, name='location')
+    url(r'^location/(?P<loc>\w+)/', views.get_image_by_location, name='location')
 
 
    
