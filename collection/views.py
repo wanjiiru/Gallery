@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from .models import Image, Category, Location
 
 
@@ -39,8 +39,8 @@ def get_image_by_location(request,loc):
     return render(request, 'location.html', {"my_images": my_images})
 
 
-def single_image(request, image_id):
-    image=Image.get_image_by_id(image_id)
-    return  render(request, 'image.html',{"image":image})
+def single_image(request,image_id):
+    image=Image.objects.get(id = image_id)
+    return render(request, 'image.html',{"image":image})
 
 
