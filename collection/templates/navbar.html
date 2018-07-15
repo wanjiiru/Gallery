@@ -13,8 +13,7 @@
 
     <div class="nav-item dropdown">
         <option class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-          Locations
-        </option>
+            Select Location to view images        </option>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           {% for location in locations %}
           <a class="dropdown-item" href="{% url 'location' loc=location.loc %}">{{location.loc}}</a>

@@ -37,3 +37,10 @@ def get_image_by_location(request,loc):
     my_images = Image.get_image_by_location(loc)
     print(my_images)
     return render(request, 'location.html', {"my_images": my_images})
+
+
+def single_image(request, image_id):
+    image=Image.get_image_by_id(image_id)
+    return  render(request, 'image.html',{"image":image})
+
+
