@@ -7,3 +7,7 @@ h3{
 .card{
     display: block;
 }
+
+div.container{
+    display: table;
+}

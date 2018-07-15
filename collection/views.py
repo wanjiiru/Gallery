@@ -26,6 +26,6 @@ def search_image(request):
         return render(request, 'search.html',{"message": message})
 
 
-def category(request,search_term):
-    categories = Image.get_image_by_cat(search_term)
+def category(request):
+    categories = Image.get_all_images()
     return render(request, 'category.html', {"categories": categories})

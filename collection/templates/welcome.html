@@ -5,8 +5,8 @@
  <h3>Welcome to my Gallery!</h3>
 
 
- {% for image in images %} 
- <div class="container wrapper">
+ {% for image in images %}
+ <div class="container" style="overflow:auto;">
     <div class="card" style="width: 25rem;">
             <h3 class="card-title">{{image.name}}</h3>
             <img class="card-img-top" src="{{image.pic.url}}" alt="Card image cap">
@@ -28,14 +28,14 @@
       <div class="modal-body text-center">
           <p class="card-text">{{image.description}}.</p>
           <p class="card-text"> Location taken : {{image.image_location}}</p>
-          <p class="card-text">Category : {{image.image_category}}</p> 
-          
+          <p class="card-text">Category : {{image.image_category}}</p>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
-  </div>        
+  </div>
 </div>
 </div>
 </div>
