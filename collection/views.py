@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Image, Category, Location
 
+
 # Create your views here.
 
 def welcome(request):
@@ -20,12 +21,18 @@ def search_image(request):
         print(found_results)
 
         return render(request, 'search.html',
-                      {'found_results': found_results, 'message': message, 'categories': categories, "locations":locations})
+                      {'found_results': found_results, 'message': message, 'categories': categories,
+                       "locations": locations})
     else:
         message = 'You havent searched yet'
-        return render(request, 'search.html',{"message": message})
+        return render(request, 'search.html', {"message": message})
 
 
 def category(request):
     categories = Image.get_all_images()
     return render(request, 'category.html', {"categories": categories})
+
+
+def get_image_by_location(request,loc):
+    my_images = Image.get_image_by_location(loc)
+    return render(render, 'category.html', {"my_images": my_images})

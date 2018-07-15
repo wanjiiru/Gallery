@@ -8,29 +8,28 @@
         <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link" href="#"></a>
       </div>
-{#    </div>#}
+    </div>
 
-    {% if locations %}
-        <li>
-            <div class="col-sm-12 col-md-12 navbar-right">
-                <form role="search" class="navbar-form navbar-right">
-                    <div class="form-group mb-2">
-                        <select id='my_loc' class="form-control">
-                            <option selected="selected" disabled="disabled">Choose a location to view images</option>
-                            {% for location in locations %}
-                                <option value="{{location.loc}}">{{location.loc}}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-                </form>
-            </div>
-        </li>
-    {% endif %}
+
+    <div class="nav-item dropdown">
+        <option class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+          Locations
+        </option>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          {% for location in locations %}
+          <a class="dropdown-item" href="{% url 'location' %}">{{location.loc}}</a>
+          {% endfor %}
+        </div>
+      </div>
+
+
+
+
 
 
 
     <!-- Adding a search form  -->
-    <div class="col-sm-4 col-md-4 navbar-right navbar-inverse">
+    <div class="col-sm-4 col-md-4 navbar-right">
 
       <form class="navbar-form" role="search" action="{% url 'search_image' %}">
 
@@ -42,7 +41,6 @@
       </form>
     </div>
     <!-- search form end -->
-    </div>
 
 
   </nav>
