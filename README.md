@@ -74,6 +74,7 @@ python manage.py runserver
 
 ### Deploying to heroku
 Refer to this guide: [deploying to heroku](https://simpleisbetterthancomplex.com/tutorial/2016/08/09/how-to-deploy-django-applications-on-heroku.html)
+
 Set the configuration to production mode
 
 
