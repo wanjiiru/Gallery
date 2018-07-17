@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2cf9e2b-2918-40b6-8b45-453019ec3dc7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/collection/models.py" afterPath="$PROJECT_DIR$/collection/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/collection/tests.py" afterPath="$PROJECT_DIR$/collection/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/collection/templates/search.html" afterPath="$PROJECT_DIR$/collection/templates/search.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="search.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/collection/templates/search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            <state relative-caret-position="63">
+              <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -85,7 +83,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/collection/tests.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="61">
@@ -155,7 +153,6 @@
         <option value="$PROJECT_DIR$/collection/templates/image.html" />
         <option value="$PROJECT_DIR$/collection/views.py" />
         <option value="$PROJECT_DIR$/collection/templates/base.html" />
-        <option value="$PROJECT_DIR$/collection/templates/search.html" />
         <option value="$PROJECT_DIR$/collection/templates/location.html" />
         <option value="$PROJECT_DIR$/collection/static/css/base.css" />
         <option value="$PROJECT_DIR$/collection/templates/navbar.html" />
@@ -163,6 +160,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/collection/tests.py" />
         <option value="$PROJECT_DIR$/collection/models.py" />
+        <option value="$PROJECT_DIR$/collection/templates/search.html" />
       </list>
     </option>
   </component>
@@ -955,14 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/collection/templates/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/collection/templates/location.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -1030,6 +1020,14 @@
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/templates/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
