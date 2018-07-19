@@ -16,7 +16,7 @@ from decouple import config,Csv
 
 MODE=config("MODE",default="dev")
 SECRET_KEY=config('SECRET_KEY')
-DEBUG=config("DEBUG",default=False, cast=bool)
+DEBUG=config("DEBUG",default=True, cast=bool)
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
