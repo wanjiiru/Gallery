@@ -1,4 +1,4 @@
-Image-gallery
+Gallery
 ===================
 ## Description
 [Gallery](https://github.com/Blankphrase/Gallery.git) A personal gallery application that displays photos for viewing, based on category
